@@ -5,6 +5,8 @@ body {
     background-color: #dadada;
 }
 
+
+/* Styles for h2 elements */
 h2{
     background-color: #827777;
     border-radius: 120px;
@@ -15,7 +17,7 @@ h2{
 }
 
 
-
+/* Styles for images */
 img {
     width: 300px;
     border-radius: 50%;
@@ -27,6 +29,7 @@ img {
     margin-right: 20px;
 }
 
+/* Styles for fancy header sections */
 .fancy-header {
             background-color: rgb(141, 161, 178);
             border-radius: 50px;
@@ -35,11 +38,13 @@ img {
             align-items: center;        /* vertical center */
         }
 
+
+/* Styles for summary elements */
 summary {
     list-style: none;
     cursor: pointer;
 }
-
+/* Hover effect for images inside summary */
 summary img:hover {
     opacity: 0.8;
 }
@@ -47,18 +52,7 @@ summary img:hover {
 
 
 
-.WhoIAM{
-   display: flex;
-   justify-content:space-between;
-   align-items: center;
-   padding: 0 50px;
-   margin: 50px 0;
-   gap:40px;
-   margin-bottom: 100px; 
-}
-
-
-
+/* Styles for text boxes */
 .p-box {
     width: 500px;
     background-color: #ffffff;
@@ -70,7 +64,7 @@ summary img:hover {
     
 }
 
-
+/* Styles for navigation bar */
 .navbar {
     display: flex;              /* FLEXBOX ✅ */
     justify-content: center;    /* center menu */
@@ -80,7 +74,7 @@ summary img:hover {
     margin: 0;
 }
 
-
+/* Styles for navigation items */
 .navbar li {
     margin-right: 15px;
 }
@@ -104,16 +98,17 @@ table {
     margin-top: 20px;
 }
 
+/* Table cell styles */
 th, td {
     border: 1px solid #333;
     padding: 10px;
 }
-
+/* Table header styles */
 th {
     background-color: #222;
     color: white;
 }
-
+/* Hover effect for table rows */
 tr:hover {
     background-color: #f2f2f2;
 }
