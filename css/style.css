@@ -51,7 +51,6 @@ summary img:hover {
 
 
 
-
 /* Styles for text boxes */
 .p-box {
     width: 500px;
@@ -85,11 +84,18 @@ summary img:hover {
     text-decoration: none;
 }
 
-/* Hover effect ✅ */
-.navbar a:hover {
-    color: rgb(234, 232, 230);
-}
 
+nav a:hover{
+   background:#333;
+   color: rgb(114, 117, 119);
+}
+ 
+nav a.active{
+   background:#00bcd4;
+   color:black;
+   font-weight:bold;
+   border-radius:6px;
+}
 
 
 
@@ -161,3 +167,5 @@ tr:hover {
             color: red;
         }
  
+
+
