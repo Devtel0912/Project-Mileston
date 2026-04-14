@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/scripts.js"></script>
+</head>
+<body onload="LoadQuestions()">
+    <nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="topic1.html">Ethical Hacking</a></li>
+        <li><a href="topic2.html">Cloud Computing Basics</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+<h1>Quiz</h1>
+<p>By Dev Telang</p>
+  <div class="quiz-container">
+        <div id="quiz"></div>
+        <button onclick="SubmitQuiz()">Submit Quiz</button>
+        <button onclick="LoadQuestions()">Reset Quiz</button>
+        <div id="result"></div>
+        <div id="details"></div>
+    </div>
+</body>
+</html>
