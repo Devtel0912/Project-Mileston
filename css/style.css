@@ -7,13 +7,15 @@ body {
 
 
 /* Styles for h2 elements */
-h2{
+h2 {
     background-color: #827777;
     border-radius: 120px;
     width: 450px;
-    display: flex;              /* REQUIRED */
-    justify-content: center;    /* horizontal center */
-    align-items: center; 
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    margin: 20px auto;          /* centers the h2 box */
+    padding: 10px;
 }
 
 
@@ -23,20 +25,20 @@ img {
     border-radius: 50%;
     position: relative;
     animation: headshotFade 9s infinite;
-     display: flex;              /* REQUIRED */
-    justify-content: center;    /* horizontal center */
-    align-items: center;
-    margin-right: 20px;
+    display: block;
+    margin: 20px auto;          /* centers image */
 }
+
 
 /* Styles for fancy header sections */
 .fancy-header {
-            background-color: rgb(141, 161, 178);
-            border-radius: 50px;
-            display: flex;              /* REQUIRED */
-            justify-content: center;    /* horizontal center */
-            align-items: center;        /* vertical center */
-        }
+    background-color: rgb(141, 161, 178);
+    border-radius: 50px;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    padding: 15px;
+}
 
 
 /* Styles for summary elements */
@@ -44,11 +46,11 @@ summary {
     list-style: none;
     cursor: pointer;
 }
+
 /* Hover effect for images inside summary */
 summary img:hover {
     opacity: 0.8;
 }
-
 
 
 /* Styles for text boxes */
@@ -58,47 +60,48 @@ summary img:hover {
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    margin-left: 15px;
-    
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin: 20px auto; /* centers the box */
 }
+
 
 /* Styles for navigation bar */
 .navbar {
-    display: flex;              /* FLEXBOX ✅ */
-    justify-content: center;    /* center menu */
+    display: flex;              
+    justify-content: center;    
     list-style: none;
     background-color: #222;
     padding: 0;
     margin: 0;
+    gap: 15px;                  /* space between links */
 }
 
-/* Styles for navigation items */
-.navbar li {
-    margin-right: 15px;
-}
 
 /* Link styles */
 .navbar a {
     color: white;
     text-decoration: none;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
 
-nav a:hover{
-   background:#333;
-   color: rgb(114, 117, 119);
-}
- 
-nav a.active{
-   background:#00bcd4;
-   color:black;
-   font-weight:bold;
-   border-radius:6px;
+/* Hover effect */
+nav a:hover {
+    background: #333;
+    color: rgb(114, 117, 119);
 }
 
 
-
+/* Active link effect */
+nav a.active {
+    background: #00bcd4;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+}
 
 
 /* Table Effects */
@@ -108,64 +111,75 @@ table {
     margin-top: 20px;
 }
 
+
 /* Table cell styles */
 th, td {
     border: 1px solid #333;
     padding: 10px;
 }
+
+
 /* Table header styles */
 th {
     background-color: #222;
     color: white;
 }
+
+
 /* Hover effect for table rows */
 tr:hover {
     background-color: #f2f2f2;
 }
 
 
- .quiz-container {
-            background: white;
-            padding: 20px;
-            max-width: 700px;
-            margin: auto;
-            border-radius: 8px;
-        }
- 
-        .question-block {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
- 
-        .question-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
- 
-        .option {
-            margin: 6px 0;
-        }
- 
-        button {
-            padding: 10px 18px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
- 
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
- 
-        .correct {
-            color: green;
-        }
- 
-        .incorrect {
-            color: red;
-        }
- 
+/* Quiz Styles */
+.quiz-container {
+    background: white;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.question-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.question-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.option {
+    margin: 6px 0;
+}
+
+button {
+    padding: 10px 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
 
 
+/* Animation for headshot (make sure this exists) */
+@keyframes headshotFade {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.4; }
+    100% { opacity: 1; }
+}
