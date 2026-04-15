@@ -8,13 +8,13 @@ body {
 
 /* Styles for h2 elements */
 h2 {
-    background-color: #827777;
+    background-color: #b8b8b8;
     border-radius: 120px;
     width: 450px;
     display: flex;              
     justify-content: center;    
     align-items: center;        
-    margin: 20px auto;          /* centers the h2 box */
+    margin: 0px auto;          /* centers the h2 box */
     padding: 10px;
 }
 
@@ -70,7 +70,7 @@ summary img:hover {
     display: flex;              
     justify-content: center;    
     list-style: none;
-    background-color: #222;
+    background-color: #535151;
     padding: 0;
     margin: 0;
     gap: 15px;                  /* space between links */
@@ -134,46 +134,70 @@ tr:hover {
 
 /* Quiz Styles */
 .quiz-container {
-    background: white;
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 25px;
+    max-width: 750px;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .question-block {
     margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 18px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #dadada;
 }
 
 .question-title {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #222;
 }
 
 .option {
-    margin: 6px 0;
+    margin: 8px 0;
+    font-size: 16px;
 }
 
+/* Button Style (Matches Navbar Theme) */
 button {
-    padding: 10px 18px;
-    margin-top: 10px;
+    padding: 12px 20px;
+    margin-top: 15px;
     cursor: pointer;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
+button:hover {
+    background-color: #333;
+    color: rgb(114, 117, 119);
+}
+
+/* Result Text */
 #result {
     margin-top: 20px;
     font-weight: bold;
+    font-size: 18px;
+    text-align: center;
 }
 
+/* Correct/Incorrect Feedback */
 .correct {
     color: green;
+    font-weight: bold;
 }
 
 .incorrect {
     color: red;
+    font-weight: bold;
 }
 
 
