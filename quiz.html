@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================================
+         META INFORMATION
+         - Sets character encoding and makes site mobile friendly
+    ================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Page title shown in browser tab -->
     <title>Quiz</title>
+      <!-- ================================
+         EXTERNAL STYLESHEET
+    ================================= -->
     <link rel="stylesheet" href="css/style.css">
+
+
+       <!-- ================================
+         EXTERNAL JAVASCRIPT FILE
+    ================================= -->
     <script src="scripts/scripts.js"></script>
 </head>
+<!-- onload calls LoadQuestions() so quiz loads automatically when page opens -->
 <body onload="LoadQuestions()">
     <nav>
     <ul class="navbar">
+        <!-- Navigation links to required project pages -->
         <li><a href="index.html">Home</a></li>
         <li><a href="topic1.html">Ethical Hacking</a></li>
         <li><a href="topic2.html">Cloud Computing Basics</a></li>
@@ -19,13 +34,25 @@
         <li><a href="about.html">About</a></li>
     </ul>
 </nav>
-<h2>Quiz</h2>
 
+<!-- Page heading -->
+<h2>Quiz</h2>
+ <!-- ================================
+         QUIZ CONTAINER
+    ================================= -->
   <div class="quiz-container">
+
+    <!-- Quiz questions will be inserted here by LoadQuestions() -->
         <div id="quiz"></div>
+        <!-- Button submits answers and calculates score -->
         <button onclick="SubmitQuiz()">Submit Quiz</button>
+        <!-- Button reloads quiz and clears previous answers -->
         <button onclick="LoadQuestions()">Reset Quiz</button>
+
+        <!-- Displays overall quiz score and pass/fail status -->
         <div id="result"></div>
+
+        <!-- Displays detailed feedback for each question -->
         <div id="details"></div>
     </div>
 </body>
