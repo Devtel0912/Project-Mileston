@@ -1,3 +1,15 @@
+/* ==========================================
+   FUNCTION: GetQuestions()
+   Purpose:
+   Stores all quiz questions in an array of objects.
+   Each object includes:
+   - Question text
+   - Answer (string or array for checkbox questions)
+   - Option type (radio, checkbox, textbox)
+   - Options array (if needed)
+========================================== */
+
+
 function GetQuestions() {
     var Questions = [
         {
@@ -78,6 +90,20 @@ function GetQuestions() {
 
     return Questions;
 }
+
+
+/* ==========================================
+   FUNCTION: LoadQuestions()
+   Purpose:
+   Dynamically builds and displays the quiz form
+   inside the <div id="quiz"> container.
+
+   This function:
+   - Loops through each question
+   - Creates HTML based on question type
+   - Inserts quiz into the webpage
+   - Clears old result output if quiz reloads
+========================================== */
 
 function LoadQuestions() {
     var Questions = GetQuestions();
@@ -165,7 +191,11 @@ function SubmitQuiz() {
                 isCorrect = true;
             }
         }
-        // CHECKBOX
+        /* ------------------------------------------
+           TEXTBOX QUESTIONS
+           - User types their answer
+           - Comparison is case-insensitive
+        ------------------------------------------ */
         if (Questions[i].Optiontype == "checkbox") {
             var checked = document.querySelectorAll(
                 "input[name='question_" + i + "']:checked",
@@ -196,6 +226,12 @@ function SubmitQuiz() {
                 isCorrect = true;
             }
         }
+
+        /* ------------------------------------------
+           BUILD ANSWER REVIEW OUTPUT
+           - Shows question, score, correct/incorrect,
+             user answer, and correct answer
+        ------------------------------------------ */
         details += "<div class='answer-review'>";
         details +=
             "<p><strong>Question " +
@@ -214,6 +250,10 @@ function SubmitQuiz() {
             "<p><strong>Correct Answer:</strong> " + correctAnswerText + "</p>";
         details += "</div>";
     }
+     /* ------------------------------------------
+       PASS/FAIL LOGIC
+       - User passes if score is at least half
+    ------------------------------------------ */
     var passFail = score >= Math.ceil(Questions.length / 2) ? "PASS" : "FAIL";
     var passFailClass = passFail == "PASS" ? "pass" : "fail";
     var resultHtml = "";
@@ -225,6 +265,7 @@ function SubmitQuiz() {
         "/" +
         Questions.length +
         "</span></h3>";
+    // Display results and detailed breakdown
     document.getElementById("result").innerHTML = resultHtml;
     document.getElementById("details").innerHTML = details;
 }
