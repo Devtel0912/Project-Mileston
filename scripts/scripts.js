@@ -94,15 +94,8 @@ function GetQuestions() {
 
 /* ==========================================
    FUNCTION: LoadQuestions()
-   Purpose:
-   Dynamically builds and displays the quiz form
-   inside the <div id="quiz"> container.
-
-   This function:
-   - Loops through each question
-   - Creates HTML based on question type
-   - Inserts quiz into the webpage
-   - Clears old result output if quiz reloads
+   Builds the quiz HTML dynamically and
+   injects it into <div id="quiz">
 ========================================== */
 
 function LoadQuestions() {
@@ -167,6 +160,12 @@ function LoadQuestions() {
 
     document.getElementById("details").innerHTML = "";
 }
+
+/* ------------------------------------------
+   SubmitQuiz()
+   Checks each answer, tallies score, and
+   renders pass/fail + detailed feedback
+------------------------------------------ */
 
 function SubmitQuiz() {
     var Questions = GetQuestions();
