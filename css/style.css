@@ -145,7 +145,12 @@ button:active {
     transform: translateY(0);
 }
  
- 
+ footer {
+    background-color: #16213e;
+    color: #c8cdd8;
+    margin-top: auto;
+    padding: 0;
+}
 /* ----------------------------------------------------------
    2. CLASS SELECTORS
    ---------------------------------------------------------- */
@@ -293,7 +298,7 @@ button:active {
     border: 1px solid #b8cfe8;
     letter-spacing: 0.3px;
 }
- 
+
  
 /* ----------------------------------------------------------
    ANIMATION
